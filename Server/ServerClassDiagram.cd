@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Server.AllPlayers">
+    <Position X="8.75" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAEAAAAAAAAACAAAAKEAAQCAAAA=</HashCode>
+      <FileName>AllPlayers.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Player" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Server.Card">
+    <Position X="12.25" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAABAAAAAAAAAAACAABAAAAAIAAA=</HashCode>
+      <FileName>Card.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.CardPacket">
+    <Position X="12.25" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAQAAAAAAgAAAAIAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>CardPacket.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Server.Games">
+    <Position X="2.25" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAgBAAAIABAgAAAALAAAAAAAABA=</HashCode>
+      <FileName>Games.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CardPacket" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Server.Player">
+    <Position X="8.75" Y="6.25" Width="2.25" />
+    <AssociationLine Name="Card" Type="Server.Card" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11" Y="6.25" />
+        <Point X="11" Y="5.875" />
+        <Point X="11.375" Y="5.875" />
+        <Point X="11.375" Y="6.959" />
+        <Point X="13.25" Y="6.959" />
+        <Point X="13.25" Y="6.584" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>QABCAAABAIAAAQkAAAgJAAwoAAAEAACAAAAAAAAAQgA=</HashCode>
+      <FileName>Player.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Card" />
+      <Property Name="Games" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Server.Program">
+    <Position X="1.5" Y="4.5" Width="1.5" />
+    <AssociationLine Name="ServerConnection" Type="Server.ServerConnection">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.839" Y="0.091" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ServerConnection" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Server.ServerConnection">
+    <Position X="5.25" Y="0.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAABAAAAAEBAACABAAAAAAggAAgMIAgABAAAAAA=</HashCode>
+      <FileName>ServerConnection.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AllPlayers" />
+      <Property Name="CardPacket" />
+      <Property Name="Games" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
